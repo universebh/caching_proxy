@@ -1,0 +1,10 @@
+version: '2'
+services:
+  proxy:
+    build: ./proxy
+    command: bash -c "bash run.sh"
+    volumes: 
+      - ./proxy:/var/log/erss/
+    ports: 
+      - "12345:12345"
+    tty: true
